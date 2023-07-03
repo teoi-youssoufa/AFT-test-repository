@@ -20,12 +20,20 @@ jobs:
         run: |
           # Add build commands here
 
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Test
         run: |
           # Add test commands here
 
   deploy:
-    needs: [build, test]
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
