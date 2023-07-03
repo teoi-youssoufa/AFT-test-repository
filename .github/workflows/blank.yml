@@ -25,7 +25,7 @@ jobs:
           # Add test commands here
 
   deploy:
-    needs: build
+    needs: [build, test]
     runs-on: ubuntu-latest
 
     steps:
@@ -35,4 +35,3 @@ jobs:
       - name: Deploy
         run: |
           # Add deployment commands here
-
