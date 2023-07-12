@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: [ubuntu-latest, windows, centos]
+    runs-on: centos
 
     steps:
       - name: Checkout code
